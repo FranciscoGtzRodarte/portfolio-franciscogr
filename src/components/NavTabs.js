@@ -57,17 +57,18 @@ function NavTabs() {
   return (
     <nav className="fixed-top">
       <li>
-        <Link to="/">frankmx</Link>
+        <Link to="/portfolio-react">frankmx</Link>
       </li>
       <ul>
         <li className="nav-link">
-          <Link to="#about">About</Link>
+          <Link to="#work">Work</Link>
         </li>
         <li className="nav-link">
-          <Link to="/work">Work</Link>
+          <Link to="/portfolio-react/about">About</Link>
         </li>
+
         <li className="nav-link">
-          <Link to="/contact">Contact</Link>
+          <Link to="/portfolio-react/contact">Contact</Link>
         </li>
         <li>
           <a

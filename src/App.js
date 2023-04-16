@@ -15,16 +15,17 @@ export default function App() {
     setTheme(newTheme);
   };
   return (
-    <div  id="theme-div" data-theme={theme}>
+    <div id="theme-div" data-theme={theme}>
       <Router>
         <NavTabs />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/work" element={<Work />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/portfolio-react" element={<Home />} />
+          <Route path="/portfolio-react/about" element={<About />} />
+          <Route path="/portfolio-react/work" element={<Work />} />
+          <Route path="/portfolio-react/contact" element={<Contact />} />
         </Routes>
       </Router>
+
       <Footer />
     </div>
   );
