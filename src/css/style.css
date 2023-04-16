@@ -552,7 +552,8 @@ footer {
   text-align: center;
   width: auto;
   position: relative;
-  margin-bottom: 8%;
+  margin-bottom: 0;
+  padding-bottom: 3rem;
 }
 
 h2 {
