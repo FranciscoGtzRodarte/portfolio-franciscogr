@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/portfolio-react/static/css/main.e0914a1b.css",
+    "main.js": "/portfolio-react/static/js/main.015df206.js",
+    "static/media/giphy2.gif": "/portfolio-react/static/media/giphy2.b70bc7c91a6d4a237311.gif",
+    "static/media/discover-denver.png": "/portfolio-react/static/media/discover-denver.5e9869f56a57eaf5e142.png",
+    "static/media/weather-dashboard.png": "/portfolio-react/static/media/weather-dashboard.bd39b931027451c500de.png",
+    "static/media/flixtails.png": "/portfolio-react/static/media/flixtails.ef4586875056fd47b659.png",
+    "static/media/hikingp.jpg": "/portfolio-react/static/media/hikingp.2d573228ffb95534b7f2.jpg",
+    "static/media/me-1.jpg": "/portfolio-react/static/media/me-1.6f2cef2d92cab2b51334.jpg",
+    "static/media/me-2.jpg": "/portfolio-react/static/media/me-2.6f7645facb961bec55ea.jpg",
+    "index.html": "/portfolio-react/index.html",
+    "main.e0914a1b.css.map": "/portfolio-react/static/css/main.e0914a1b.css.map",
+    "main.015df206.js.map": "/portfolio-react/static/js/main.015df206.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e0914a1b.css",
+    "static/js/main.015df206.js"
+  ]
+}
