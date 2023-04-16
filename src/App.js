@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import NavTabs from "./components/NavTabs";
+import Footer from "./components/Footer";
+import Home from "./components/pages/Home";
+import About from "./components/pages/About";
+import Work from "./components/pages/Work";
+import Contact from "./components/pages/Contact";
+import useLocalStorage from "use-local-storage";
 
-function App() {
+export default function App() {
+  const [theme, setTheme] = useLocalStorage("theme" ? "night" : "day");
+
+  const switchTheme = () => {
+    const newTheme = theme === "day" ? "night" : "day";
+    setTheme(newTheme);
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div  id="theme-div" data-theme={theme}>
+      <Router>
+        <NavTabs />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/work" element={<Work />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </Router>
+      <Footer />
     </div>
   );
 }
-
-export default App;

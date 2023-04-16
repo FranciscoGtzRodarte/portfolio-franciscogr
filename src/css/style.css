@@ -1,0 +1,781 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&family=Poppins:wght@200;400;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap");
+/*sets universal values*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", "Poppins", sans-serif;
+  color: var(--light-color);
+}
+/* sets root variables, useful for color themes*/
+:root {
+  --dark-color: #2c2c2c;
+  --darker-color: #252424;
+  --light-color: #f5f5f5;
+  --accent-color: #2bb907;
+  --accent-color-hover: #3bec0f2c;
+  --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  --border-radius: 4px;
+}
+[data-theme="day"] {
+  --dark-color: #d9d9d9;
+  --darker-color: #cbcbcb;
+  --light-color: #2c2c2c;
+  --accent-color: #2bb907;
+  --accent-color-hover: #3bec0f2c;
+  --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  --border-radius: 4px;
+}
+
+.bg-night {
+  background-color: var(--dark-color);
+}
+
+.switch {
+  width: 60px;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.4);
+  display: flex;
+  justify-content: flex-start;
+  border-radius: 50px;
+  padding: 5px;
+  cursor: pointer;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+.switch[data-isOn="true"] {
+  justify-content: flex-end;
+}
+
+.handle {
+  width: 20px;
+  height: 20px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 40px;
+  z-index: 10;
+}
+
+.moon {
+  position: absolute;
+  right: 6px;
+  width: 0.8em;
+  padding-bottom: 5px;
+}
+
+.sun {
+  position: absolute;
+  right: 32px;
+  width: 0.8em;
+  padding-bottom: 5px;
+}
+/*--------navigation section-----------*/
+
+/*tha nav bar is fixed and displays the navigation bar items with a space-between*/
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 4rem;
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  background-color: var(--dark-color);
+  box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.048),
+    0 0px 20px 0 rgba(0, 0, 0, 0.048);
+}
+
+/*displays list items with a space-evenly separation*/
+ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+}
+
+/*definets font styles of list items and anchors*/
+li,
+nav a {
+  font-weight: 700;
+  font-size: 18px;
+  list-style: none;
+  display: inline-block;
+  text-decoration: none;
+  color: var(--light-color);
+  text-align: center;
+}
+li {
+  margin-left: 2rem;
+}
+
+nav a:hover {
+  color: var(--accent-color);
+}
+
+.socials svg {
+  transform: rotate(90deg);
+}
+
+a.logo {
+  font-weight: 700;
+  font-size: 37px;
+  color: var(--accent-color);
+}
+
+/*styles the border bottom of the nav items when hover*/
+.nav-link:hover {
+  border-bottom: 4px solid var(--accent-color);
+}
+
+/*styles the resume button with variables for the color, background color and border*/
+a.resume {
+  background-color: var(--dark-color);
+  border: var(--accent-color) solid 2px;
+  color: var(--light-color);
+  border-radius: var(--border-radius);
+  padding: 10px 20px;
+  text-align: center;
+  min-width: 100px;
+}
+
+/*resume download icon*/
+.resume span {
+  position: relative;
+  top: 4px;
+}
+
+a.resume:hover {
+  background-color: var(--accent-color-hover);
+  color: var(--light-color);
+}
+
+/*styles the input sent button*/
+.sent-btn {
+  background-color: var(--dark-color);
+  border: var(--accent-color) solid 2px;
+  color: var(--light-color);
+  border-radius: var(--border-radius);
+  padding: 1rem 3rem;
+  text-align: center;
+  margin-top: 10%;
+}
+
+input.sent-btn {
+  width: auto;
+}
+/*hover state styling*/
+.sent-btn:hover,
+button:hover {
+  background-color: var(--accent-color-hover);
+}
+
+/*set the header section full height of screen and its items as flex items*/
+header {
+  width: auto;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+/*positions the header text in front of the gif and margin left of 12%*/
+.header-text {
+  z-index: 2;
+  margin: 0;
+  margin-left: 12%;
+}
+/*positions the gif behind the text, width auto, margin right and a greyscale filter*/
+.interactive-animation {
+  z-index: 1;
+  width: auto;
+  margin-right: 14%;
+  filter: grayscale();
+}
+/*changes the hue of the gif when hover*/
+img.interactive-animation:hover {
+  filter: hue-rotate(314deg);
+}
+
+/*h1 font styling*/
+h1 {
+  margin-top: 3rem;
+  font-size: 250%;
+  font-weight: 700;
+}
+
+/*p font styling*/
+p {
+  font-size: 104%;
+  line-height: 25px;
+  margin-top: 15px;
+  line-height: 1.5;
+}
+/*all spans elements set to green*/
+span {
+  color: var(--accent-color);
+}
+
+/*styles the button elements*/
+button {
+  background: var(--dark-color);
+  border: var(--accent-color) solid 2px;
+  color: var(--light-color);
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  font-size: 130%;
+  text-align: center;
+  padding: 1rem 3rem;
+  margin-top: 5%;
+  cursor: pointer;
+}
+
+button.whatsaap {
+  background: var(--accent-color);
+  border: var(--accent-color) solid 2px;
+  color: var(--light-color);
+  border-radius: var(--border-radius);
+}
+
+button.whatsaap:hover {
+  background: var(--dark-color);
+  border: var(--accent-color) solid 2px;
+  color: var(--light-color);
+  border-radius: var(--border-radius);
+}
+
+/*sides contact info icons and email, rotates the content 90 degrees with a fixed position*/
+.contact-info {
+  transform: rotate(-90deg);
+  position: fixed;
+  display: block;
+}
+
+.contact-info a {
+  color: #747474;
+}
+
+.contact-info a:hover {
+  color: var(--accent-color);
+}
+/*positions the social icons*/
+.social {
+  bottom: 40%;
+  left: -2%;
+}
+
+.socials i {
+  transform: rotate(90deg);
+}
+/*positions the email */
+.email {
+  bottom: 52%;
+  right: -7%;
+}
+
+.contact-info .email a {
+  font-weight: 300;
+}
+/*all sections set with a margin 12% left-right and a padding 12% all sides*/
+section {
+  margin: 0 12%;
+  padding-top: 12%;
+}
+/* --------------- about section*/
+/*sets the container as flexbox*/
+.about {
+  display: flex;
+  flex-flow: wrap row;
+}
+/*styles the text inside the container*/
+.about-text {
+  width: 55%;
+  margin-left: 10%;
+}
+
+.about-text h2 {
+  margin-bottom: 10%;
+}
+
+.about-text p {
+  line-height: 1.7;
+}
+/*styles the two unordered lists with the skills*/
+.skills {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: 5%;
+}
+
+.skills ul {
+  display: block;
+  margin-right: 15%;
+  line-height: 2;
+  list-style-type: circle;
+}
+
+.skills li {
+  display: block;
+  text-align: left;
+}
+
+/*-------------------work section*/
+/*adds a line after the subtitle*/
+
+.margin-top-work {
+  margin-top: 80%;
+}
+
+.work h2::after {
+  content: "";
+  display: inline-block;
+  width: 80%;
+  border-bottom: 2px solid #2bb907;
+  margin-left: 2%;
+  position: relative;
+  margin-bottom: 0.5%;
+}
+
+/*the featured work container is set as a flexbox*/
+.featured-work {
+  display: flex;
+  flex-flow: wrap column;
+  justify-content: center;
+  align-items: center;
+  margin: 5%;
+  position: relative;
+}
+/*all images set to a greyscale filter, box shadow and width auto*/
+/*uses a transition property to make the value states move when hover*/
+img {
+  width: 100%;
+  transform: scale(1);
+  transition: var(
+    --transition
+  ); /*all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);*/
+  border-radius: var(--border-radius);
+  filter: grayscale(1);
+  box-shadow: 0 0px 0px -15px #000;
+}
+/*when hover image the filter dissapears*/
+img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 30px -15px #000;
+  cursor: pointer;
+  filter: grayscale(0);
+}
+/*moves the description container when the figure is hovered*/
+.featured-work figure:hover .featured-description {
+  left: -6%;
+}
+/*moves the figcaption when the figure is hovered*/
+
+.featured-work figure:hover figcaption {
+  margin: 4% 0;
+}
+
+/*more subheadings*/
+h4 {
+  color: var(--accent-color);
+}
+
+h3 {
+  font-size: 180%;
+  margin-bottom: 5%;
+}
+/*figcaption under the image*/
+figcaption {
+  display: flex;
+  justify-content: flex-end;
+  margin: 2% 0;
+  transition: var(--transition);
+}
+
+/*positions the description container*/
+.featured-description {
+  width: 34%;
+  position: absolute;
+  left: -3%;
+  bottom: -2%;
+  transition: var(--transition);
+}
+/*makes the ul of the description as a flexbox*/
+.featured-description ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  margin-bottom: 5%;
+  margin-left: 10%;
+}
+/*styles the description container*/
+.description-container {
+  background-color: var(--darker-color);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 10px 30px -15px #000;
+}
+/*------------- other work section
+is set as a flexbox with the flex items in column*/
+.other-work {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  margin-top: 12%;
+  align-items: center;
+}
+
+.other-work h2 {
+  text-align: center;
+}
+
+/*projects container is set to flexbox with items in a row*/
+.projects-container {
+  display: flex;
+  flex-flow: wrap column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+}
+
+.projects,
+.more-projects {
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+}
+
+/*styling of the project card*/
+.project {
+  background-color: var(--darker-color);
+  margin: 1%;
+  padding: 2rem;
+  width: 30%;
+  border-radius: var(--border-radius);
+  transform: translateY(0);
+  box-shadow: 0 0px 30px -15px #000;
+  transition: var(--transition);
+}
+/*adds a background gif to the project container with an opacity, centered and a sepia filter*/
+.project:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  border-radius: var(--border-radius);
+  /* background-image: url(../images/giphy.gif); */
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+  filter: sepia(1);
+  transition: var(--transition);
+}
+/*add a box shadow when hover*/
+.project:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px -15px #000;
+  cursor: pointer;
+}
+/*sets background gif to opacity 0 when project container is hover*/
+.project:hover::before {
+  opacity: 0;
+}
+/*styling of project card elements*/
+
+.project h3 {
+  font-size: 140%;
+  color: var(--accent-color);
+  position: relative;
+}
+
+.project p {
+  margin-bottom: 5%;
+  font-size: 0.9rem;
+  position: relative;
+}
+
+.project pre {
+  margin-bottom: 10%;
+}
+
+.project ul {
+  justify-content: center;
+  text-align: center;
+}
+
+.project li {
+  margin: 0 5%;
+}
+
+/*hides the project cards with the hide class*/
+.hide {
+  display: none;
+}
+
+/*---------------contact section*/
+.contact-form-section {
+  background-color: var(--dark-color);
+  z-index: 3;
+}
+
+.contact-form-section h2 {
+  font-size: 300%;
+  margin-bottom: 10%;
+}
+
+footer {
+  background-color: var(--darker-color);
+}
+
+.contact-text {
+  position: relative;
+  text-align: center;
+  margin-bottom: 8%;
+}
+/*styling of the contact form*/
+.contact-form {
+  text-align: center;
+  width: auto;
+  position: relative;
+  margin-bottom: 8%;
+}
+
+h2 {
+  font-size: 180%;
+}
+/*form is set as a flexbox*/
+form {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  margin-top: 2%;
+}
+
+.basic-info {
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 10%;
+}
+/* name input flex grow*/
+.name-form {
+  flex-grow: 6;
+}
+/*email input flex grow*/
+.email-form {
+  flex-grow: 6;
+}
+
+.message-form input {
+  width: 100%;
+}
+
+/*styling of the name and email inputs*/
+input {
+  background-color: var(--dark-color);
+  border: 0;
+  border-bottom: 2px solid var(--light-color);
+  height: 58px;
+  color: var(--accent-color);
+  display: block;
+  width: 85%;
+  position: relative;
+  margin: 1% auto;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+}
+/*styling of the message box*/
+textarea {
+  resize: none;
+  overflow: auto;
+  width: 100%;
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+  border: 0;
+  border-bottom: 2px solid var(--light-color);
+  margin: 2% auto;
+}
+/*styling of input when focus*/
+input:focus-visible {
+  outline-offset: 0px;
+  outline: 0px;
+  border-bottom: 2px solid var(--accent-color);
+}
+
+:focus-visible {
+  outline: 0px;
+  border-bottom: 2px solid var(--accent-color);
+}
+/*styling of placeholder*/
+::placeholder {
+  color: var(--light-color);
+  opacity: 0.4;
+  font-weight: 400;
+}
+/*-------------footer section*/
+footer {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  align-items: center;
+  padding: 2% 6%;
+}
+
+footer li {
+  margin-left: 0;
+}
+
+/*icons are postioned in line*/
+ul.icons {
+  display: inline-block;
+  width: -webkit-fill-available;
+}
+
+ul.icons li {
+  margin-right: 5%;
+}
+
+/*styling of the credits*/
+p.rights {
+  color: var(--light-color);
+  width: auto;
+  text-align: right;
+  margin-top: 0;
+}
+
+/*-----responsive design--------------*/
+
+/*1199 px and lower*/
+@media screen and (max-width: 1199px) {
+  .interactive-animation {
+    margin-right: 10%;
+    opacity: 0.2;
+    position: absolute;
+    right: 0;
+  }
+}
+
+/*999 px and lower*/
+@media screen and (max-width: 999px) {
+  /* increments size of projects*/
+  .project {
+    width: 48%;
+  }
+  .social {
+    left: -5%;
+  }
+
+  .email {
+    right: -11%;
+  }
+  /*nav is set as column instead of row*/
+  nav {
+    flex-direction: column;
+  }
+}
+
+/*874px screen size or lower*/
+
+@media screen and (max-width: 874px) {
+  .about-text {
+    width: 100%;
+    margin: 10% 0%;
+  }
+
+  .featured-description {
+    display: none;
+  }
+  /*repositions the featured work description*/
+  .featured-work figure:hover .featured-description {
+    width: 100%;
+    z-index: 5;
+    display: inline-block;
+    user-select: none;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    background-color: var(--darker-color);
+    border-radius: var(--border-radius);
+  }
+  /*repositions the link icons of the project*/
+  .featured-work figure:hover .featured-description ul {
+    justify-content: center;
+    margin-left: 0;
+  }
+
+  .featured-work figure:hover .featured-description ul li {
+    margin: 2%;
+  }
+  /*side conact info dissapears*/
+  .contact-info {
+    display: none;
+  }
+}
+
+/*660px screen size or lower*/
+@media screen and (max-width: 660px) {
+  .project {
+    width: 100%;
+  }
+}
+/*590px screen size or lower*/
+@media screen and (max-width: 590px) {
+  .about {
+    justify-content: center;
+  }
+  /*increments size of about section in columns*/
+
+  .about-text {
+    width: 100%;
+    margin: 10% 0%;
+  }
+  /*sets elements to center*/
+  header {
+    align-items: center;
+  }
+
+  .header-text {
+    text-align: center;
+    width: auto;
+    margin: 12%;
+  }
+  /*reduces the opacity of header gif*/
+  .interactive-animation {
+    opacity: 0.1;
+  }
+  /*increments the size of the form inputs*/
+  input {
+    width: 100%;
+    margin: 4% auto;
+  }
+  /*footer elements set to column direction*/
+  footer {
+    flex-direction: column;
+  }
+
+  footer ul {
+    margin-bottom: 4%;
+  }
+}
+
+/*finito..... for the moment*/
