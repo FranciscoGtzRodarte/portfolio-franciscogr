@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://myusername.github.io/portfolio-react",
+  "homepage": "https://myusername.github.io/portfolio-franciscogr",
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
@@ -24,7 +24,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-     "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

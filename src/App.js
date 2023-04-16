@@ -19,10 +19,10 @@ export default function App() {
       <Router>
         <NavTabs />
         <Routes>
-          <Route path="/portfolio-react" element={<Home />} />
-          <Route path="/portfolio-react/about" element={<About />} />
-          <Route path="/portfolio-react/work" element={<Work />} />
-          <Route path="/portfolio-react/contact" element={<Contact />} />
+          <Route path="/portfolio-franciscogr" element={<Home />} />
+          <Route path="/portfolio-franciscogr/about" element={<About />} />
+          <Route path="/portfolio-franciscogr/work" element={<Work />} />
+          <Route path="/portfolio-franciscogr/contact" element={<Contact />} />
         </Routes>
       </Router>
 
