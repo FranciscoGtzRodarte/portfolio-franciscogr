@@ -14,13 +14,13 @@ I learn the animation framework FrameMotion building this portfolio and Im feeli
 
 Here is the my first wireframe created in figma.
 
-![alt text](assets/images/Wireframe-1.png)
+![alt text](src/images/Wireframe-1.png)
 
 ## Hi-Fi Wireframe
 
 Here is the my High fidelity wireframe created also in figma.
 
-![alt text](assets/images/Wireframe-HiFi.png)
+![alt text](src/images/Wireframe-HiFi.png)
 
 ## Deployed site link
 https://franciscogtzrodarte.github.io/portfolio-franciscogr/
