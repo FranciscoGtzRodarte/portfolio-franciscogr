@@ -108,20 +108,7 @@ const Form = () => {
           ></textarea>
           {formErrors.msg && <span className="error">{formErrors.msg}</span>}
         </div>
-        {/* <div className="form-row">
-            <label htmlFor="password">Password</label>
-            <input
-              type="password"
-              name="password"
-              id="password"
-              value={formValues.password}
-              onChange={handleChange}
-              className={formErrors.password && "input-error"}
-            />
-            {formErrors.password && (
-              <span className="error">{formErrors.password}</span>
-            )}
-          </div> */}
+
         <input className="sent-btn" type="submit" value="Let's do this" />
       </form>
     </div>
