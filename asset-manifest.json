@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio-franciscogr/static/css/main.20d83efa.css",
-    "main.js": "/portfolio-franciscogr/static/js/main.1982cbac.js",
+    "main.css": "/portfolio-franciscogr/static/css/main.feba9a6c.css",
+    "main.js": "/portfolio-franciscogr/static/js/main.09d9cbf7.js",
     "static/media/Gutierrez-RodarteF_Resume2023.pdf": "/portfolio-franciscogr/static/media/Gutierrez-RodarteF_Resume2023.83749fc26a78db9aeed4.pdf",
     "static/media/giphy2.gif": "/portfolio-franciscogr/static/media/giphy2.b70bc7c91a6d4a237311.gif",
     "static/media/discover-denver.png": "/portfolio-franciscogr/static/media/discover-denver.5e9869f56a57eaf5e142.png",
@@ -12,11 +12,11 @@
     "static/media/me-1.jpg": "/portfolio-franciscogr/static/media/me-1.6f2cef2d92cab2b51334.jpg",
     "static/media/me-2.jpg": "/portfolio-franciscogr/static/media/me-2.6f7645facb961bec55ea.jpg",
     "index.html": "/portfolio-franciscogr/index.html",
-    "main.20d83efa.css.map": "/portfolio-franciscogr/static/css/main.20d83efa.css.map",
-    "main.1982cbac.js.map": "/portfolio-franciscogr/static/js/main.1982cbac.js.map"
+    "main.feba9a6c.css.map": "/portfolio-franciscogr/static/css/main.feba9a6c.css.map",
+    "main.09d9cbf7.js.map": "/portfolio-franciscogr/static/js/main.09d9cbf7.js.map"
   },
   "entrypoints": [
-    "static/css/main.20d83efa.css",
-    "static/js/main.1982cbac.js"
+    "static/css/main.feba9a6c.css",
+    "static/js/main.09d9cbf7.js"
   ]
 }
