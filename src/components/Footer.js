@@ -1,5 +1,11 @@
 import { Link } from "react-router-dom";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import { HashLink } from "react-router-hash-link";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import AnimationIcon from "@mui/icons-material/Animation";
+
+import GitHubIcon from "@mui/icons-material/GitHub";
 
 function Footer() {
   return (
@@ -18,12 +24,12 @@ function Footer() {
         </li>
         <li>
           <a href="https://github.com/FranciscoGtzRodarte" target="_blank">
-            <i className="fa-brands fa-github"></i>
+            <GitHubIcon />
           </a>
         </li>
         <li>
           <a href="https://www.instagram.com/paconga/" target="_blank">
-            <i className="fa-brands fa-instagram"></i>
+            <InstagramIcon />
           </a>
         </li>
         <li>
@@ -31,12 +37,12 @@ function Footer() {
             href="https://www.linkedin.com/in/francisco-rodarte/"
             target="_blank"
           >
-            <i className="fa-brands fa-linkedin-in"></i>
+            <LinkedInIcon />
           </a>
         </li>
         <li>
           <a href="https://www.behance.net/francisco-rodarte" target="_blank">
-            <i className="fa-brands fa-behance"></i>
+            <AnimationIcon />
           </a>
         </li>
       </ul>

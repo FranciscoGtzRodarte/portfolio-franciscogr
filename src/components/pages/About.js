@@ -5,7 +5,7 @@ import { aboutMe, aboutMe2 } from "../../images";
 export default function About() {
   return (
     <div className="bg-night">
-      <section id="about" className="about ">
+      <section id="about" className="about padding-custom ">
         <div className="about-img">
           <img src={aboutMe} alt="francisco's profile picture" />
         </div>

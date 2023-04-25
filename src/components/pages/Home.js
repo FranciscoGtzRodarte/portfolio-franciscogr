@@ -1,7 +1,7 @@
 import "../../css/style.css";
 import { headerGif } from "../../images";
 import { project01, project02, project03, project04 } from "../../images";
-
+import { HashLink } from "react-router-hash-link";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -28,6 +28,8 @@ export default function Home() {
   return (
     <div className="bg-night">
       <motion.header style={{ opacity, scale }} ref={targetRef} className="">
+        
+
         <div className="header-text">
           <h1>
             Put your user
@@ -42,16 +44,16 @@ export default function Home() {
             </span>{" "}
             FrontEnd Developer
           </p>
-          <a href="#work">
-            {" "}
-            <motion.button
+           
+          <HashLink smooth to={"/portfolio-franciscogr#work-section"}>
+          <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
               {" "}
               Let's go!
             </motion.button>
-          </a>
+          </HashLink>
         </div>
         <img
           className="interactive-animation"
@@ -61,39 +63,39 @@ export default function Home() {
       </motion.header>
       <div className="contact-info social">
         <ul className="socials">
-          <li>
+          <motion.li whileHover={{ scale: 1.2 }}>
             <a href="https://github.com/FranciscoGtzRodarte" target="_blank">
               <GitHubIcon />
             </a>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li whileHover={{ scale: 1.2 }}>
             <a href="https://www.instagram.com/paconga/" target="_blank">
               <InstagramIcon />
             </a>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li whileHover={{ scale: 1.2 }}>
             <a
               href="https://www.linkedin.com/in/francisco-rodarte/"
               target="_blank"
             >
               <LinkedInIcon />
             </a>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li whileHover={{ scale: 1.2 }}>
             <a href="http://franciscorodarte.com/" target="_blank">
               <AnimationIcon />
             </a>
-          </li>
+          </motion.li>
         </ul>
       </div>
 
       <div className="contact-info email">
         <ul className="e-mail">
-          <li>
+          <motion.li whileHover={{ scale: 1.2 }}>
             <a href="mailto:francisco.gutierrezrodarte@du.edu">
               francisco.gutierrezrodarte@du.edu
             </a>
-          </li>
+          </motion.li>
         </ul>
       </div>
       <Work />

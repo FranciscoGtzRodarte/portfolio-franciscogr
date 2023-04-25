@@ -21,7 +21,7 @@ export default function App() {
         <Routes>
           <Route path="/portfolio-franciscogr" element={<Home />} />
           <Route path="/portfolio-franciscogr/about" element={<About />} />
-          <Route path="/portfolio-franciscogr/work" element={<Work />} />
+          <Route path="/portfolio-franciscogr/#work" element={<Work />} />
           <Route path="/portfolio-franciscogr/contact" element={<Contact />} />
         </Routes>
       </Router>

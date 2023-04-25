@@ -1,10 +1,11 @@
 import React from "react";
+import Form from "../Form";
 
 export default function Contact() {
   return (
-    <div>
-      <section id="contact" className="contact-form-section bg-night">
-        <div className="contact-text">
+    <div className="bg-night">
+      <section id="contact" className="contact-form-section padding-custom">
+        <div className="contact-text mt-5">
           <h2>
             Let's make <br />
             something move!
@@ -19,29 +20,8 @@ export default function Contact() {
             Let me know what you need by filling in this quick website form.‍
           </p>
         </div>
-        <div className="contact-form">
-          <form>
-            <div className="basic-info">
-              <div className="name-form">
-                <label>Your Name</label>
-                <input placeholder="Name" type="text" />
-              </div>
-              <div className="email-form">
-                <label>Email Address</label>
-                <input type="email" placeholder="Email" />
-              </div>
-            </div>
-            <div className="message-form">
-              <label>Your Message</label>
-              <textarea
-                className="message-area"
-                rows="3"
-                placeholder="Hi! We need your help to make a beautiful website about our company showcasing our products.  We have a really good budget in mind. Let’s collaborate together."
-              ></textarea>
-            </div>
-            <input className="sent-btn" type="button" value="Let's do this" />
-          </form>
-        </div>
+
+        <Form />
       </section>
     </div>
   );

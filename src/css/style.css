@@ -117,13 +117,28 @@ nav a:hover {
 .socials svg {
   transform: rotate(90deg);
 }
+.socials svg:hover {
+  fill: var(--accent-color);
+}
 
+.st0 {
+  fill: var(--accent-color);
+}
+.st1 {
+  fill: var(--light-color);
+}
+.frank-svg {
+}
 a.logo {
   font-weight: 700;
   font-size: 37px;
   color: var(--accent-color);
 }
-
+span code {
+  font-size: 0.875em;
+  color: var(--accent-color);
+  word-wrap: break-word;
+}
 /*styles the border bottom of the nav items when hover*/
 .nav-link:hover {
   border-bottom: 4px solid var(--accent-color);
@@ -286,7 +301,6 @@ button.whatsaap:hover {
 }
 /*all sections set with a margin 12% left-right and a padding 12% all sides*/
 section {
-  margin: 0 12%;
   padding-top: 12%;
 }
 /* --------------- about section*/
@@ -593,7 +607,7 @@ input {
   height: 58px;
   color: var(--accent-color);
   display: block;
-  width: 85%;
+  width: 100%;
   position: relative;
   margin: 1% auto;
   font-family: "Plus Jakarta Sans", sans-serif;
@@ -663,11 +677,18 @@ p.rights {
   text-align: right;
   margin-top: 0;
 }
+.padding-custom{
+  padding: 10%;
+}
 
 /*-----responsive design--------------*/
 
 /*1199 px and lower*/
 @media screen and (max-width: 1199px) {
+  .padding-custom {
+    padding: 10%;
+  }
+
   .interactive-animation {
     margin-right: 10%;
     opacity: 0.2;
@@ -698,6 +719,9 @@ p.rights {
 /*874px screen size or lower*/
 
 @media screen and (max-width: 874px) {
+  .padding-custom {
+    padding: 6%;
+  }
   .about-text {
     width: 100%;
     margin: 10% 0%;
@@ -735,12 +759,41 @@ p.rights {
 
 /*660px screen size or lower*/
 @media screen and (max-width: 660px) {
+  .padding-custom {
+    padding: 8%;
+  }
   .project {
     width: 100%;
   }
 }
 /*590px screen size or lower*/
 @media screen and (max-width: 590px) {
+  .padding-custom {
+    padding: 10%;
+  }
+
+  .margin-top-work {
+    margin-top: 148%;
+  }
+
+  nav a {
+    font-size: 15px;
+  }
+  a.resume {
+    padding: 2px;
+  }
+
+  ul {
+    margin-bottom: 0;
+  }
+  li {
+    margin-left: 1rem;
+  }
+
+  .contact-form-section {
+    margin-top: 6rem;
+  }
+
   .about {
     justify-content: center;
   }
